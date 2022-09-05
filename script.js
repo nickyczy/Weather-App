@@ -1,4 +1,4 @@
-const timezone = document.querySelector(".timezone");
+const time = document.querySelector(".time");
 const city = document.querySelector(".city");
 const cityTemp = document.querySelector(".weather-temp");
 const pressureEl = document.querySelector(".pressure");
@@ -9,6 +9,10 @@ const iconEl = document.querySelector(".icon");
 
 const searchButton = document.querySelector(".search-button");
 const searchInput = document.querySelector(".search-bar");
+
+// var d = new Date();
+// var n = d.toLocaleDateString();
+// document.getElementById("date").innerText = n;
 
 const weather = {
 	apiKey: "6b0a723190d286693b72befbb0a7e3e8",
@@ -27,19 +31,9 @@ const weather = {
 	displayWeather: function (data) {
 		const { name } = data;
 		const { icon, description } = data.weather[0];
-		const { temp, temp_min, temp_max, humidity, pressure } = data.main;
+
+		const { temp, humidity, pressure } = data.main;
 		const { speed } = data.wind;
-		console.log(
-			name,
-			icon,
-			description,
-			temp,
-			temp_min,
-			temp_max,
-			humidity,
-			pressure,
-			speed
-		);
 
 		city.innerText = name;
 		cityTemp.innerText = `${temp} °C`;
@@ -47,7 +41,7 @@ const weather = {
 		humidityEl.innerText = humidity + " %";
 		wind.innerText = speed + " m/s";
 		pressureEl.innerText = pressure + " hPa";
-		icon.src = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
+		iconEl.src = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
 
 		document.querySelector(".current-info").classList.remove("loading");
 
