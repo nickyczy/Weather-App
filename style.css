@@ -10,7 +10,7 @@ body {
 	font-family: "Oxygen", sans-serif;
 	height: 100vh;
 	margin: 0;
-	background: linear-gradient(rgb(47, 150, 164), rgb(48, 62, 143));
+	background: linear-gradient(rgb(47, 150, 164), rgb(48, 62, 143)) no-repeat;
 }
 
 .container {
@@ -60,8 +60,11 @@ body {
 	border: 1px solid white;
 	border-radius: 2rem;
 	box-shadow: 3px 10px rgba(162, 162, 162, 0.3);
-	width: 50%;
+	width: 20%;
 	background-color: rgba(0, 204, 255, 0.3);
+}
+
+.location-info {
 }
 
 .location-item {
@@ -77,10 +80,14 @@ body {
 	padding-left: 0.5rem;
 	font-weight: 400;
 }
+.date {
+	font-size: 1.5rem;
+}
 
-.date,
 .weather-temp {
-	font-size: 1.65rem;
+	font-size: 2.5rem;
+	font-weight: 700;
+	color: white;
 }
 
 .city {
@@ -90,7 +97,7 @@ body {
 
 .temp-display {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	align-items: center;
 	padding: 0 1rem;
 }
