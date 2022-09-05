@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./style.css" />
+		<link
+			href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+		<script src="./script.js" defer></script>
+		<title>Weather App</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="nav">
+				<div class="search">
+					<input type="text" placeholder="Search" class="search-bar" />
+					<button class="search-button"><i class="bx bx-search"></i></button>
+				</div>
+			</div>
+
+			<div class="current-info loading">
+				<div class="location-info">
+					<div class="location-item">
+						<div class="time">05:30 <span class="am-pm">PM</span></div>
+					</div>
+					<div class="location-item">
+						<div class="date">Monday, 22 Aug</div>
+					</div>
+					<div class="location-item">
+						<div class="city">Melbourne</div>
+					</div>
+					<div class="location-item temp-display">
+						<div class="weather-temp">10°C</div>
+						<div class="icon-display">
+							<img
+								src="http://openweathermap.org/img/wn/10d@2x.png"
+								alt=""
+								class="icon"
+							/>
+							<div class="description">Cloudy</div>
+						</div>
+					</div>
+				</div>
+				<div class="weather">
+					<div class="weather-item">
+						<div>Humidity</div>
+						<div class="humidity">50%</div>
+					</div>
+					<div class="weather-item">
+						<div>Wind Speed</div>
+						<div class="windspeed">7 m/s</div>
+					</div>
+					<div class="weather-item">
+						<div>Pressure</div>
+						<div class="pressure">1007hPa</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
